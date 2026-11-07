@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Nazrul Islam | Associate Professor of Geography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-red-600 selection:text-white">
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-cyan-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#home" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full border-2 border-red-600 overflow-hidden flex-shrink-0 shadow-lg shadow-red-600/40 bg-amber-100 flex items-center justify-center">
+                        <i class="fa-solid fa-user-tie text-blue-900 text-lg"></i>
+                    </div>
+                    <span class="font-bold text-lg tracking-tight text-white">Dr. Nazrul Islam</span>
+                </a>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-cyan-100/80">
+                    <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+                    <a href="#research" class="hover:text-cyan-400 transition-colors">Research & Profiles</a>
+                    <a href="#publications" class="hover:text-cyan-400 transition-colors">Publications</a>
+                    <a href="#teaching" class="hover:text-cyan-400 transition-colors">Teaching & Courses</a>
+                    <a href="#upcoming" class="hover:text-cyan-400 transition-colors">Projects</a>
+                    <a href="#resources" class="hover:text-cyan-400 transition-colors">Resources</a>
+                    <a href="#training" class="hover:text-cyan-400 transition-colors">Training</a>
+                    <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+                </nav>
+
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="#publications" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all shadow-md shadow-red-600/30">
+                        View Publications <i class="fa-solid fa-arrow-down ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-md text-cyan-300 hover:text-white hover:bg-red-600" onclick="toggleMobileMenu()">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileNav" class="hidden md:hidden bg-cyan-950 border-b border-cyan-900/60 px-4 pt-2 pb-4 space-y-2 text-sm font-medium text-cyan-100">
+            <a href="#about" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">About</a>
+            <a href="#research" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Research Profiles</a>
+            <a href="#publications" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Publications</a>
+            <a href="#teaching" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Teaching & Courses</a>
+            <a href="#upcoming" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Upcoming Projects</a>
+            <a href="#resources" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Downloadable Resources</a>
+            <a href="#training" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Training Courses</a>
+            <a href="#contact" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Contact</a>
+        </div>
+    </header>
+
+    <main id="home">
+        <!-- Hero Section -->
+        <section class="py-16 sm:py-24 bg-gradient-to-b from-slate-950 via-cyan-950 to-blue-950 border-b border-cyan-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <div class="w-48 sm:w-64 md:w-80 flex-shrink-0">
+                        <div class="relative group">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-cyan-500 rounded-3xl blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
+                            
+                            <!-- Elegant Academic Profile Avatar Container -->
+                            <div class="relative rounded-2xl w-full aspect-[4/5] bg-gradient-to-br from-amber-100 via-amber-200 to-amber-300 border-2 border-cyan-700/60 shadow-2xl overflow-hidden flex flex-col items-center justify-center p-6 text-center">
+                                <div class="w-32 h-32 rounded-full bg-blue-950/20 border-2 border-blue-900 flex items-center justify-center mb-4 shadow-inner">
+                                    <i class="fa-solid fa-user-graduate text-6xl text-blue-950"></i>
+                                </div>
+                                <h3 class="font-bold text-blue-950 text-xl tracking-tight">Dr. Nazrul Islam</h3>
+                                <p class="text-xs font-semibold text-blue-900 uppercase tracking-wider mt-1">Associate Professor</p>
+                                <span class="mt-3 px-3 py-1 rounded-full bg-blue-950 text-amber-200 text-xs font-medium">Department of Geography</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 space-y-6 text-center md:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-900/50 border border-cyan-700/60 text-cyan-300 text-xs font-semibold tracking-wide uppercase">
+                            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                            Faculty of Geography, CBPBU
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                            Dr. Nazrul Islam
+                        </h1>
+                        <p class="text-xl text-cyan-200 font-medium">
+                            Associate Professor of Geography
+                        </p>
+                        <p class="text-cyan-100/80 text-base leading-relaxed max-w-2xl">
+                            Cooch Behar Panchanan Barma University, West Bengal, India. Specializing in Cartography, Social & Industrial Geography, Environmental Analysis, Remote Sensing (RS), and Geographic Information Systems (GIS).
+                        </p>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
+                            <a href="#publications" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg shadow-red-600/40 transition-all flex items-center gap-2">
+                                <i class="fa-solid fa-book-open"></i> Explore 47+ Publications
+                            </a>
+                            <a href="#resources" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg shadow-red-600/40 transition-all flex items-center gap-2">
+                                <i class="fa-solid fa-download"></i> Course Materials & Resources
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic About Me -->
+        <section id="about" class="py-16 border-b border-cyan-900/40 bg-gradient-to-b from-blue-950 to-slate-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-white tracking-tight">About Me</h2>
+                    <p class="text-cyan-200/70 mt-2">Academic background, qualifications, and research domain focus</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 bg-cyan-950/50 p-6 sm:p-8 rounded-2xl border border-cyan-800/60 space-y-4 text-cyan-100/90 leading-relaxed shadow-xl">
+                        <p>
+                            I have been serving as an <strong class="text-white">Associate Professor of Geography</strong> at Cooch Behar Panchanan Barma University since 2021. Prior to this, I served as Assistant Professor at Sitalkuchi College and held various guest faculty positions teaching postgraduate courses.
+                        </p>
+                        <p>
+                            My academic journey began at Asutosh College (University of Calcutta) with a B.Sc. (Honours) in Geography with Geology, followed by an M.Sc. from the University of Calcutta. I was awarded the <span class="text-cyan-300 font-medium">National Scholarship</span> for academic excellence. I completed my Ph.D. at the University of North Bengal in 2018.
+                        </p>
+                        <p>
+                            I have undertaken advanced technical training in Remote Sensing and GIS from <strong class="text-white">IIRS, Dehradun</strong> and <strong class="text-white">DST, West Bengal</strong>. My primary focus includes spatial multi-criteria decision making (MCDM), urban environmental modeling, water quality assessment, and social geography.
+                        </p>
+                    </div>
+                    <div class="bg-cyan-950/50 p-6 rounded-2xl border border-cyan-800/60 space-y-4 shadow-xl">
+                        <h3 class="text-lg font-bold text-white border-b border-cyan-900 pb-3"><i class="fa-solid fa-graduation-cap text-cyan-400 mr-2"></i> Quick Academic Profile</h3>
+                        <ul class="space-y-3 text-sm text-cyan-100">
+                            <li class="flex justify-between border-b border-cyan-900/60 pb-2"><span class="text-cyan-300/70">Designation:</span> <span class="font-semibold text-white">Associate Professor</span></li>
+                            <li class="flex justify-between border-b border-cyan-900/60 pb-2"><span class="text-cyan-300/70">Institution:</span> <span class="font-semibold text-white">CBPBU, West Bengal</span></li>
+                            <li class="flex justify-between border-b border-cyan-900/60 pb-2"><span class="text-cyan-300/70">Ph.D. Year:</span> <span class="font-semibold text-white">2018 (NBU)</span></li>
+                            <li class="flex justify-between border-b border-cyan-900/60 pb-2"><span class="text-cyan-300/70">Master's (M.Sc.):</span> <span class="font-semibold text-white">Calcutta University</span></li>
+                            <li class="flex justify-between border-b border-cyan-900/60 pb-2"><span class="text-cyan-300/70">Honors:</span> <span class="text-cyan-300 font-semibold">National Scholar</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic & Research Profiles -->
+        <section id="research" class="py-16 bg-slate-950 border-b border-cyan-900/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Academic Profiles & Research Databases</h2>
+                    <p class="text-cyan-200/70 mt-2">Connect with my research metrics across international indexing platforms</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <a href="https://scholar.google.com" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                        <i class="fa-solid fa-graduation-cap text-2xl text-white"></i>
+                        <div><div class="font-semibold text-white text-sm">Google Scholar</div><div class="text-xs text-red-100">Citations & Index</div></div>
+                    </a>
+                    <a href="https://orcid.org" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                        <i class="fa-solid fa-id-card text-2xl text-white"></i>
+                        <div><div class="font-semibold text-white text-sm">ORCID</div><div class="text-xs text-red-100">Researcher ID</div></div>
+                    </a>
+                    <a href="https://www.scopus.com" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                        <i class="fa-solid fa-globe text-2xl text-white"></i>
+                        <div><div class="font-semibold text-white text-sm">Scopus</div><div class="text-xs text-red-100">Elsevier Index</div></div>
+                    </a>
+                    <a href="https://www.webofscience.com" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                        <i class="fa-solid fa-book-bookmark text-2xl text-white"></i>
+                        <div><div class="font-semibold text-white text-sm">Web of Science</div><div class="text-xs text-red-100">Clarivate JCR</div></div>
+                    </a>
+                    <a href="https://www.researchgate.net" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                        <i class="fa-solid fa-flask text-2xl text-white"></i>
+                        <div><div class="font-semibold text-white text-sm">ResearchGate</div><div class="text-xs text-red-100">Preprints & Papers</div></div>
+                    </a>
+                    <a href="https://www.academia.edu" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                        <i class="fa-solid fa-university text-2xl text-white"></i>
+                        <div><div class="font-semibold text-white text-sm">Academia.edu</div><div class="text-xs text-red-100">Scholarly Papers</div></div>
+                    </a>
+                    <a href="https://irins.org" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                        <i class="fa-solid fa-building-columns text-2xl text-white"></i>
+                        <div><div class="font-semibold text-white text-sm">IRINS</div><div class="text-xs text-red-100">Indian Network</div></div>
+                    </a>
+                    <a href="https://vidwan.inflibnet.ac.in" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                        <i class="fa-solid fa-award text-2xl text-white"></i>
+                        <div><div class="font-semibold text-white text-sm">Vidwan</div><div class="text-xs text-red-100">INFLIBNET Profile</div></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching Schedules & Curriculum -->
+        <section id="teaching" class="py-16 border-b border-cyan-900/40 bg-gradient-to-b from-slate-950 to-blue-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-white tracking-tight"><i class="fa-solid fa-chalkboard-user text-cyan-400 mr-2"></i> Teaching & Courses Taught</h2>
+                    <p class="text-cyan-200/70 mt-2">Postgraduate (M.Sc.) and Doctoral (Ph.D.) coursework modules at CBPBU</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-cyan-950/60 p-6 rounded-2xl border border-cyan-800/60 flex flex-col justify-between shadow-lg">
+                        <div>
+                            <span class="px-2.5 py-1 rounded bg-red-600 text-white text-xs font-semibold">M.Sc. Geography</span>
+                            <h3 class="text-lg font-bold text-white mt-3">Cartography & Quantitative Techniques</h3>
+                            <p class="text-cyan-100/80 text-sm mt-2">Map projections, thematic mapping, spatial statistics, statistical modeling, and GIS analysis fundamentals.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-cyan-900 text-xs text-cyan-300/70">Semester I & II Module</div>
+                    </div>
+                    <div class="bg-cyan-950/60 p-6 rounded-2xl border border-cyan-800/60 flex flex-col justify-between shadow-lg">
+                        <div>
+                            <span class="px-2.5 py-1 rounded bg-red-600 text-white text-xs font-semibold">M.Sc. Geography</span>
+                            <h3 class="text-lg font-bold text-white mt-3">Social & Cultural Geography</h3>
+                            <p class="text-cyan-100/80 text-sm mt-2">Space and society, social well-being, migration dynamics, cultural landscapes, and gendered spatial analysis in North Bengal.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-cyan-900 text-xs text-cyan-300/70">Semester III Module</div>
+                    </div>
+                    <div class="bg-cyan-950/60 p-6 rounded-2xl border border-cyan-800/60 flex flex-col justify-between shadow-lg">
+                        <div>
+                            <span class="px-2.5 py-1 rounded bg-red-600 text-white text-xs font-semibold">M.Sc. / Ph.D. Core</span>
+                            <h3 class="text-lg font-bold text-white mt-3">Environmental Geography & RS/GIS</h3>
+                            <p class="text-cyan-100/80 text-sm mt-2">Remote sensing digital image processing, land surface temperature, LULC modeling, Fuzzy-AHP, and MCDM application.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-cyan-900 text-xs text-cyan-300/70">Advanced Elective & Research Methodology</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Research & Active Projects -->
+        <section id="upcoming" class="py-16 bg-slate-950 border-b border-cyan-900/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-white tracking-tight"><i class="fa-solid fa-compass-drafting text-cyan-400 mr-2"></i> Upcoming Research & Ongoing Projects</h2>
+                    <p class="text-cyan-200/70 mt-2">Active investigations in Sub-Himalayan geography, hydro-social dynamics, and environmental management</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-2xl bg-cyan-950/60 border border-cyan-800/60 relative overflow-hidden shadow-lg">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-red-600/10 rounded-bl-full pointer-events-none"></div>
+                        <span class="px-3 py-1 rounded-full bg-red-600 text-white text-xs font-semibold">Ongoing Project (2025–2027)</span>
+                        <h3 class="text-xl font-bold text-white mt-3">Sub-Himalayan River Basin Hydro-Dynamics & Eco-Tourism</h3>
+                        <p class="text-cyan-100/80 text-sm mt-2 leading-relaxed">
+                            Evaluating riverbank erosion, groundwater depletion using GLDAS datasets, and geotourism site suitability across the Eastern Dooars region using machine learning and coupled E-PROMETHEE-II MCDM models.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-cyan-950/60 border border-cyan-800/60 relative overflow-hidden shadow-lg">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-red-600/10 rounded-bl-full pointer-events-none"></div>
+                        <span class="px-3 py-1 rounded-full bg-red-600 text-white text-xs font-semibold">Book Project (In Preparation)</span>
+                        <h3 class="text-xl font-bold text-white mt-3">Geospatial Intelligence for Urban Waste & Sanitation (SDG-6 & 11)</h3>
+                        <p class="text-cyan-100/80 text-sm mt-2 leading-relaxed">
+                            A comprehensive monograph focusing on Machine Learning & ANN-based prediction models for municipal solid waste management, drinking water quality index (WQI), and WASH service equity in Eastern India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloadable Academic Resources -->
+        <section id="resources" class="py-16 border-b border-cyan-900/40 bg-gradient-to-b from-blue-950 to-slate-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-white tracking-tight"><i class="fa-solid fa-file-arrow-down text-cyan-400 mr-2"></i> Downloadable Resources & Materials</h2>
+                    <p class="text-cyan-200/70 mt-2">Open-access course outlines, practical GIS guidelines, and research tools for students</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-cyan-950/60 p-6 rounded-2xl border border-cyan-800/60 shadow-lg flex flex-col justify-between">
+                        <div>
+                            <i class="fa-solid fa-file-pdf text-red-500 text-3xl mb-3"></i>
+                            <h3 class="font-bold text-white text-base">GIS & Remote Sensing Lab Guide</h3>
+                            <p class="text-cyan-100/80 text-xs mt-1">Step-by-step practical guide for QGIS, land surface temperature computation, and LULC classification.</p>
+                        </div>
+                        <a href="mailto:nazviox@gmail.com?subject=Request%20GIS%20Lab%20Guide" class="mt-4 inline-block text-center bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg text-xs font-semibold transition-all shadow-md shadow-red-600/30">
+                            Request Resource PDF <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                    <div class="bg-cyan-950/60 p-6 rounded-2xl border border-cyan-800/60 shadow-lg flex flex-col justify-between">
+                        <div>
+                            <i class="fa-solid fa-file-lines text-red-500 text-3xl mb-3"></i>
+                            <h3 class="font-bold text-white text-base">M.Sc. Geography Syllabus Overview</h3>
+                            <p class="text-cyan-100/80 text-xs mt-1">Detailed course structure, recommended textbooks, and evaluation rubrics for postgraduate students.</p>
+                        </div>
+                        <a href="mailto:nazviox@gmail.com?subject=Request%20MSc%20Syllabus%20Notes" class="mt-4 inline-block text-center bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg text-xs font-semibold transition-all shadow-md shadow-red-600/30">
+                            Request Syllabus Document <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                    <div class="bg-cyan-950/60 p-6 rounded-2xl border border-cyan-800/60 shadow-lg flex flex-col justify-between">
+                        <div>
+                            <i class="fa-solid fa-table-cells text-red-500 text-3xl mb-3"></i>
+                            <h3 class="font-bold text-white text-base">AHP & MCDM Matrix Calculator</h3>
+                            <p class="text-cyan-100/80 text-xs mt-1">Excel-based template for computing Analytic Hierarchy Process (AHP) consistency ratios for spatial modeling.</p>
+                        </div>
+                        <a href="mailto:nazviox@gmail.com?subject=Request%20AHP%20MCDM%20Template" class="mt-4 inline-block text-center bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg text-xs font-semibold transition-all shadow-md shadow-red-600/30">
+                            Request Template File <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training Courses -->
+        <section id="training" class="py-16 bg-slate-950 border-b border-cyan-900/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Training Courses & Pedagogy</h2>
+                    <p class="text-cyan-200/70 mt-2">Specialized short-term courses, orientations, and technical workshops</p>
+                </div>
+                <div class="overflow-x-auto rounded-xl border border-cyan-800/60 bg-cyan-950/60 shadow-xl">
+                    <table class="w-full text-left text-sm text-cyan-100">
+                        <thead class="bg-blue-950 text-xs uppercase text-cyan-300 border-b border-cyan-900">
+                            <tr>
+                                <th class="p-4">#</th>
+                                <th class="p-4">Programme Title</th>
+                                <th class="p-4">Duration & Dates</th>
+                                <th class="p-4">Organized By</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-cyan-900/60">
+                            <tr class="hover:bg-cyan-900/40 transition-colors">
+                                <td class="p-4 font-bold text-red-500">1</td>
+                                <td class="p-4 font-semibold text-white">Short-term Course: Remote Sensing & GIS</td>
+                                <td class="p-4">2 weeks (Apr 30 - May 05, 2012)</td>
+                                <td class="p-4">Dept. of Science & Technology, Govt. of West Bengal</td>
+                            </tr>
+                            <tr class="hover:bg-cyan-900/40 transition-colors">
+                                <td class="p-4 font-bold text-red-500">2</td>
+                                <td class="p-4 font-semibold text-white">SPSS and ATLAS-TI Quantitative & Qualitative Data Analysis</td>
+                                <td class="p-4">15 Days / 100 Hrs (May 27 - Jun 5, 2013)</td>
+                                <td class="p-4">ICSSR Sponsored & Tata Institute of Social Sciences (TISS), Mumbai</td>
+                            </tr>
+                            <tr class="hover:bg-cyan-900/40 transition-colors">
+                                <td class="p-4 font-bold text-red-500">3</td>
+                                <td class="p-4 font-semibold text-white">Orientation Programme on NSS</td>
+                                <td class="p-4">7 Days (Nov 9 - 15, 2014)</td>
+                                <td class="p-4">TORC, Ramkrishna Mission & Dept. of Youth Affairs, Govt. of India</td>
+                            </tr>
+                            <tr class="hover:bg-cyan-900/40 transition-colors">
+                                <td class="p-4 font-bold text-red-500">4</td>
+                                <td class="p-4 font-semibold text-white">Rocks & Mineral Identification, Geological Map & Soil Testing</td>
+                                <td class="p-4">1 Week National Workshop (Dec 15 - 21, 2014)</td>
+                                <td class="p-4">Sitalkuchi College & Geological Survey of India (GSI, ER), Kolkata</td>
+                            </tr>
+                            <tr class="hover:bg-cyan-900/40 transition-colors">
+                                <td class="p-4 font-bold text-red-500">5</td>
+                                <td class="p-4 font-semibold text-white">UGC Orientation Program</td>
+                                <td class="p-4">28 Days (Feb 26 - Mar 25, 2015)</td>
+                                <td class="p-4">UGC-ASC at University of North Bengal</td>
+                            </tr>
+                            <tr class="hover:bg-cyan-900/40 transition-colors">
+                                <td class="p-4 font-bold text-red-500">6</td>
+                                <td class="p-4 font-semibold text-white">UGC Summer Programme (OP/RC Equivalent)</td>
+                                <td class="p-4">21 Days (Jun 8 - 28, 2016)</td>
+                                <td class="p-4">UGC-HRDC, Allahabad University</td>
+                            </tr>
+                            <tr class="hover:bg-cyan-900/40 transition-colors">
+                                <td class="p-4 font-bold text-red-500">7</td>
+                                <td class="p-4 font-semibold text-white">SERB DIA Workshop: Essential Field Techniques in Geosciences</td>
+                                <td class="p-4">10 Days (Dec 15 - 21, 2016)</td>
+                                <td class="p-4">Vidyasagar University, Midnapore, WB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="py-16 border-b border-cyan-900/40 bg-gradient-to-b from-blue-950 to-slate-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Research Publications (47)</h2>
+                    <p class="text-cyan-200/70 mt-2">Books, chapters, and high-impact peer-reviewed journal papers</p>
+                </div>
+
+                <!-- Search and Filters -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-between items-center mb-8">
+                    <div class="relative w-full sm:w-80">
+                        <input type="text" id="pubSearch" placeholder="Search papers, authors, journals..." class="w-full bg-cyan-950/80 border border-cyan-800 rounded-lg pl-10 pr-4 py-2.5 text-sm text-white placeholder-cyan-400/50 focus:outline-none focus:border-red-600 transition-colors">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-cyan-400 text-sm"></i>
+                    </div>
+
+                    <div class="flex items-center gap-2 overflow-x-auto w-full sm:w-auto no-scrollbar py-1">
+                        <button onclick="filterPubs('all')" class="filter-btn bg-red-600 hover:bg-red-700 text-white px-3.5 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all shadow-md shadow-red-600/30">All (47)</button>
+                        <button onclick="filterPubs('q1q2')" class="filter-btn bg-red-600 hover:bg-red-700 text-white opacity-80 hover:opacity-100 px-3.5 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all shadow-md">Q1 / Q2 Impact</button>
+                        <button onclick="filterPubs('books')" class="filter-btn bg-red-600 hover:bg-red-700 text-white opacity-80 hover:opacity-100 px-3.5 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all shadow-md">Books & Chapters</button>
+                        <button onclick="filterPubs('wash')" class="filter-btn bg-red-600 hover:bg-red-700 text-white opacity-80 hover:opacity-100 px-3.5 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all shadow-md">WASH & Health</button>
+                    </div>
+                </div>
+
+                <!-- Publications Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6" id="publicationsList">
+
+                    <!-- Publication Item 1 -->
+                    <div class="pub-card bg-cyan-950/50 p-5 rounded-xl border border-cyan-800/60 hover:border-red-600/60 transition-all shadow-lg" data-category="q1 wash high-impact">
+                        <div class="flex items-start justify-between gap-3">
+                            <span class="px-2.5 py-1 rounded bg-red-600 text-white text-xs font-semibold shadow-sm">IF 4.90 | Q1</span>
+                            <span class="text-xs text-cyan-300 font-medium">2024</span>
+                        </div>
+                        <h3 class="text-base font-bold text-white mt-3 hover:text-cyan-300 transition-colors">
+                            <a href="https://scholar.google.com/scholar?q=Understanding+period+product+use+among+young+women+in+rural+and+urban+India+from+a+geospatial+perspective+Nazrul+Islam" target="_blank">
+                                Understanding period product use among young women in rural and urban India from a geospatial perspective <i class="fa-solid fa-arrow-up-right-from-square text-xs text-cyan-400 ml-1"></i>
+                            </a>
+                        </h3>
+                        <p class="text-xs text-cyan-200/70 mt-1">S Biswas, A Alam, N Islam, R Roy, L Satpati</p>
+                        <p class="text-xs text-cyan-300 font-medium mt-2">Scientific Reports 14 (1), 20114, 2024</p>
+                        <div class="mt-4 pt-3 border-t border-cyan-900 flex items-center justify-between">
+                            <span class="text-[11px] text-cyan-400/70">Springer Nature</span>
+                            <a href="https://scholar.google.com/scholar?q=Understanding+period+product+use+among+young+women+in+rural+and+urban+India+from+a+geospatial+perspective+Nazrul+Islam" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-xs font-semibold shadow-sm transition-all">Read Paper ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Publication Item 2 -->
+                    <div class="pub-card bg-cyan-950/50 p-5 rounded-xl border border-cyan-800/60 hover:border-red-600/60 transition-all shadow-lg" data-category="q2 high-impact">
+                        <div class="flex items-start justify-between gap-3">
+                            <span class="px-2.5 py-1 rounded bg-red-600 text-white text-xs font-semibold shadow-sm">IF 4.90 | Q2</span>
+                            <span class="text-xs text-cyan-300 font-medium">2025</span>
+                        </div>
+                        <h3 class="text-base font-bold text-white mt-3 hover:text-cyan-300 transition-colors">
+                            <a href="https://scholar.google.com/scholar?q=Geotourism+site+suitability+assessment+by+a+novel+GIS-based+MCDM+method+in+the+Eastern+Duars+region+Nazrul+Islam" target="_blank">
+                                Geotourism site suitability assessment by a novel GIS-based MCDM method in the Eastern Duars region (Himalayan foothill) of West Bengal <i class="fa-solid fa-arrow-up-right-from-square text-xs text-cyan-400 ml-1"></i>
+                            </a>
+                        </h3>
+                        <p class="text-xs text-cyan-200/70 mt-1">N Islam, I Paul, B Sarkar</p>
+                        <p class="text-xs text-cyan-300 font-medium mt-2">Environment, Development and Sustainability, 1-36, 2025</p>
+                        <div class="mt-4 pt-3 border-t border-cyan-900 flex items-center justify-between">
+                            <span class="text-[11px] text-cyan-400/70">Springer</span>
+                            <a href="https://scholar.google.com/scholar?q=Geotourism+site+suitability+assessment+by+a+novel+GIS-based+MCDM+method+in+the+Eastern+Duars+region+Nazrul+Islam" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-xs font-semibold shadow-sm transition-all">Read Paper ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Publication Item 3 -->
+                    <div class="pub-card bg-cyan-950/50 p-5 rounded-xl border border-cyan-800/60 hover:border-red-600/60 transition-all shadow-lg" data-category="q2 high-impact">
+                        <div class="flex items-start justify-between gap-3">
+                            <span class="px-2.5 py-1 rounded bg-red-600 text-white text-xs font-semibold shadow-sm">IF 3.90 | Q2</span>
+                            <span class="text-xs text-cyan-300 font-medium">2022</span>
+                        </div>
+                        <h3 class="text-base font-bold text-white mt-3 hover:text-cyan-300 transition-colors">
+                            <a href="https://scholar.google.com/scholar?q=A+novel+GIS-based+MCDM+approach+to+identify+the+potential+eco-tourism+sites+in+the+Eastern+Dooars+region+Nazrul+Islam" target="_blank">
+                                A novel GIS-based MCDM approach to identify the potential eco-tourism sites in the Eastern Dooars region of West Bengal, India <i class="fa-solid fa-arrow-up-right-from-square text-xs text-cyan-400 ml-1"></i>
+                            </a>
+                        </h3>
+                        <p class="text-xs text-cyan-200/70 mt-1">N Islam, B Sarkar, A Basak, P Das, I Paul, M Debnath, R Roy</p>
+                        <p class="text-xs text-cyan-300 font-medium mt-2">Geocarto International 37 (26), 13145-13175, 2022</p>
+                        <div class="mt-4 pt-3 border-t border-cyan-900 flex items-center justify-between">
+                            <span class="text-[11px] text-cyan-400/70">Taylor & Francis</span>
+                            <a href="https://scholar.google.com/scholar?q=A+novel+GIS-based+MCDM+approach+to+identify+the+potential+eco-tourism+sites+in+the+Eastern+Dooars+region+Nazrul+Islam" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-xs font-semibold shadow-sm transition-all">Read Paper ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Publication Item 4 -->
+                    <div class="pub-card bg-cyan-950/50 p-5 rounded-xl border border-cyan-800/60 hover:border-red-600/60 transition-all shadow-lg" data-category="books springer">
+                        <div class="flex items-start justify-between gap-3">
+                            <span class="px-2.5 py-1 rounded bg-red-600 text-white text-xs font-semibold shadow-sm">Springer Book</span>
+                            <span class="text-xs text-cyan-300 font-medium">2023</span>
+                        </div>
+                        <h3 class="text-base font-bold text-white mt-3 hover:text-cyan-300 transition-colors">
+                            <a href="https://scholar.google.com/scholar?q=Population+Sanitation+and+Health+A+Geographical+Study+Towards+Sustainability+Nazrul+Islam" target="_blank">
+                                Population, Sanitation and Health: A Geographical Study Towards Sustainability <i class="fa-solid fa-arrow-up-right-from-square text-xs text-cyan-400 ml-1"></i>
+                            </a>
+                        </h3>
+                        <p class="text-xs text-cyan-200/70 mt-1">A Alam, N Islam, B Sarkar, R Roy</p>
+                        <p class="text-xs text-cyan-300 font-medium mt-2">Springer International Publishing, 2023</p>
+                        <div class="mt-4 pt-3 border-t border-cyan-900 flex items-center justify-between">
+                            <span class="text-[11px] text-cyan-400/70">Edited Volume</span>
+                            <a href="https://scholar.google.com/scholar?q=Population+Sanitation+and+Health+A+Geographical+Study+Towards+Sustainability+Nazrul+Islam" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-xs font-semibold shadow-sm transition-all">View Book ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Publication Item 5 -->
+                    <div class="pub-card bg-cyan-950/50 p-5 rounded-xl border border-cyan-800/60 hover:border-red-600/60 transition-all shadow-lg" data-category="books springer">
+                        <div class="flex items-start justify-between gap-3">
+                            <span class="px-2.5 py-1 rounded bg-red-600 text-white text-xs font-semibold shadow-sm">Springer Book</span>
+                            <span class="text-xs text-cyan-300 font-medium">2024</span>
+                        </div>
+                        <h3 class="text-base font-bold text-white mt-3 hover:text-cyan-300 transition-colors">
+                            <a href="https://scholar.google.com/scholar?q=Population+Environment+and+Disease+Towards+Health+Geography+Nazrul+Islam" target="_blank">
+                                Population, Environment and Disease: Towards Health Geography <i class="fa-solid fa-arrow-up-right-from-square text-xs text-cyan-400 ml-1"></i>
+                            </a>
+                        </h3>
+                        <p class="text-xs text-cyan-200/70 mt-1">A Alam, S Biswas, N Islam, R Roy</p>
+                        <p class="text-xs text-cyan-300 font-medium mt-2">Springer International Publishing, 2024</p>
+                        <div class="mt-4 pt-3 border-t border-cyan-900 flex items-center justify-between">
+                            <span class="text-[11px] text-cyan-400/70">Edited Volume</span>
+                            <a href="https://scholar.google.com/scholar?q=Population+Environment+and+Disease+Towards+Health+Geography+Nazrul+Islam" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-xs font-semibold shadow-sm transition-all">View Book ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Publication Item 6 -->
+                    <div class="pub-card bg-cyan-950/50 p-5 rounded-xl border border-cyan-800/60 hover:border-red-600/60 transition-all shadow-lg" data-category="q3 high-impact">
+                        <div class="flex items-start justify-between gap-3">
+                            <span class="px-2.5 py-1 rounded bg-red-600 text-white text-xs font-semibold shadow-sm">IF 3.60 | Q3</span>
+                            <span class="text-xs text-cyan-300 font-medium">2026</span>
+                        </div>
+                        <h3 class="text-base font-bold text-white mt-3 hover:text-cyan-300 transition-colors">
+                            <a href="https://scholar.google.com/scholar?q=Groundwater+storage+depletion+in+Eastern+Duars+Region+of+West+Bengal+India+Nazrul+Islam" target="_blank">
+                                Groundwater storage depletion in Eastern Duars Region of West Bengal, India: an integrated approach using regridded GLDAS data <i class="fa-solid fa-arrow-up-right-from-square text-xs text-cyan-400 ml-1"></i>
+                            </a>
+                        </h3>
+                        <p class="text-xs text-cyan-200/70 mt-1">A Basak, N Islam</p>
+                        <p class="text-xs text-cyan-300 font-medium mt-2">Modeling Earth Systems and Environment 12 (1), 32, 2026</p>
+                        <div class="mt-4 pt-3 border-t border-cyan-900 flex items-center justify-between">
+                            <span class="text-[11px] text-cyan-400/70">Springer</span>
+                            <a href="https://scholar.google.com/scholar?q=Groundwater+storage+depletion+in+Eastern+Duars+Region+of+West+Bengal+India+Nazrul+Islam" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-xs font-semibold shadow-sm transition-all">Read Paper ↗</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-slate-950 border-b border-cyan-900/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Contact & Academic Correspondence</h2>
+                    <p class="text-cyan-200/70 mt-2">Reach out for research collaborations, postgraduate academic queries, or doctoral supervision</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <a href="mailto:nazrulislam@cbpbu.ac.in" class="bg-red-600 hover:bg-red-700 text-white p-6 rounded-2xl border border-red-500/50 text-center transition-all shadow-lg shadow-red-600/20">
+                        <i class="fa-solid fa-envelope-open-text text-3xl text-white mb-3"></i>
+                        <h3 class="font-bold text-white text-sm">Institutional Email</h3>
+                        <p class="text-xs text-red-100 mt-1">nazrulislam@cbpbu.ac.in</p>
+                    </a>
+                    <a href="mailto:nazviox@gmail.com" class="bg-red-600 hover:bg-red-700 text-white p-6 rounded-2xl border border-red-500/50 text-center transition-all shadow-lg shadow-red-600/20">
+                        <i class="fa-solid fa-envelope text-3xl text-white mb-3"></i>
+                        <h3 class="font-bold text-white text-sm">Personal Email</h3>
+                        <p class="text-xs text-red-100 mt-1">nazviox@gmail.com</p>
+                    </a>
+                    <a href="tel:+917076039420" class="bg-red-600 hover:bg-red-700 text-white p-6 rounded-2xl border border-red-500/50 text-center transition-all shadow-lg shadow-red-600/20">
+                        <i class="fa-solid fa-phone text-3xl text-white mb-3"></i>
+                        <h3 class="font-bold text-white text-sm">Phone Contact</h3>
+                        <p class="text-xs text-red-100 mt-1">+91 7076039420</p>
+                    </a>
+                </div>
+
+                <!-- Social Media Buttons -->
+                <div class="flex justify-center gap-4 mt-8">
+                    <a href="https://facebook.com" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 shadow-md shadow-red-600/30">
+                        <i class="fa-brands fa-facebook text-base"></i> Facebook Profile
+                    </a>
+                    <a href="https://x.com" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 shadow-md shadow-red-600/30">
+                        <i class="fa-brands fa-x-twitter text-base"></i> X (Twitter)
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-cyan-950 bg-slate-950 py-8 text-center text-xs text-cyan-400/60">
+        <p>© <span id="currentYear"></span> Dr. Nazrul Islam. Department of Geography, Cooch Behar Panchanan Barma University.</p>
+        <p class="mt-1 text-cyan-300/80">Emails: nazviox@gmail.com | nazrulislam@cbpbu.ac.in — Phone: +91 7076039420</p>
+    </footer>
+
+    <!-- Filter & Mobile JS Logic -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('hidden');
+        }
+
+        // Search Filter Logic
+        const pubSearch = document.getElementById('pubSearch');
+        if (pubSearch) {
+            pubSearch.addEventListener('input', function (e) {
+                const query = e.target.value.toLowerCase();
+                const cards = document.querySelectorAll('.pub-card');
+                cards.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    if (text.includes(query)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        // Category Filter Logic
+        function filterPubs(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.add('opacity-80');
+            });
+
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.remove('opacity-80');
+            }
+
+            const cards = document.querySelectorAll('.pub-card');
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else if (category === 'q1q2') {
+                    const tag = card.dataset.category || '';
+                    if (tag.includes('q1') || tag.includes('q2') || tag.includes('high-impact')) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                } else if (category === 'books') {
+                    const tag = card.dataset.category || '';
+                    if (tag.includes('book') || tag.includes('springer')) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                } else if (category === 'wash') {
+                    const tag = card.dataset.category || '';
+                    if (tag.includes('wash') || tag.includes('health')) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
