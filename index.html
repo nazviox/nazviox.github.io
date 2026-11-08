@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        html { scroll-padding-top: 5rem; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
@@ -16,8 +17,8 @@
     <!-- Sticky Navigation Header -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-cyan-900/40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <a href="#home" class="flex items-center space-x-3">
+            <div class="flex items-center justify-between gap-4 h-16">
+                <a href="#home" class="flex shrink-0 items-center space-x-3">
                     <div class="w-10 h-10 rounded-full border-2 border-red-600 overflow-hidden flex-shrink-0 shadow-lg shadow-red-600/40 bg-amber-100 flex items-center justify-center">
                         <img src="Sketch of NI_2.png" alt="Dr. Nazrul Islam" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fa-solid fa-user-tie text-blue-900 text-lg\'></i>';">
                     </div>
@@ -25,7 +26,7 @@
                 </a>
                 
                 <!-- Desktop Nav -->
-                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-cyan-100/80">
+                <nav aria-label="Main navigation" class="hidden xl:flex items-center gap-3 whitespace-nowrap text-sm font-medium text-cyan-100/80">
                     <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
                     <a href="#research" class="hover:text-cyan-400 transition-colors">Research & Profiles</a>
                     <a href="#publications" class="hover:text-cyan-400 transition-colors">Publications</a>
@@ -33,24 +34,26 @@
                     <a href="#upcoming" class="hover:text-cyan-400 transition-colors">Projects</a>
                     <a href="#resources" class="hover:text-cyan-400 transition-colors">Resources</a>
                     <a href="#training" class="hover:text-cyan-400 transition-colors">Training</a>
+                    <a href="#supervision" class="hover:text-cyan-400 transition-colors">Ph.D. Supervision</a>
+                    <a href="#outreach" class="hover:text-cyan-400 transition-colors">Outreach</a>
                     <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
                 </nav>
 
-                <div class="hidden md:flex items-center space-x-3">
+                <div class="hidden 2xl:flex shrink-0 items-center space-x-3">
                     <a href="#publications" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all shadow-md shadow-red-600/30">
                         View Publications <i class="fa-solid fa-arrow-down ml-1"></i>
                     </a>
                 </div>
 
                 <!-- Mobile Hamburger Button -->
-                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-md text-cyan-300 hover:text-white hover:bg-red-600" onclick="toggleMobileMenu()">
-                    <i class="fa-solid fa-bars text-xl"></i>
+                <button id="mobileMenuBtn" type="button" aria-label="Toggle navigation" aria-controls="mobileNav" aria-expanded="false" class="xl:hidden p-2 rounded-md text-cyan-300 hover:text-white hover:bg-red-600" onclick="toggleMobileMenu()">
+                    <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobileNav" class="hidden md:hidden bg-cyan-950 border-b border-cyan-900/60 px-4 pt-2 pb-4 space-y-2 text-sm font-medium text-cyan-100">
+        <nav id="mobileNav" aria-label="Mobile navigation" class="hidden xl:hidden max-h-[calc(100dvh-4rem)] overflow-y-auto bg-cyan-950 border-b border-cyan-900/60 px-4 pt-2 pb-4 space-y-2 text-sm font-medium text-cyan-100">
             <a href="#about" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">About</a>
             <a href="#research" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Research Profiles</a>
             <a href="#publications" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Publications</a>
@@ -58,8 +61,10 @@
             <a href="#upcoming" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Upcoming Projects</a>
             <a href="#resources" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Downloadable Resources</a>
             <a href="#training" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Training Courses</a>
+            <a href="#supervision" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Ph.D. Supervision</a>
+            <a href="#outreach" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Outreach</a>
             <a href="#contact" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Contact</a>
-        </div>
+        </nav>
     </header>
 
     <main id="home">
@@ -146,29 +151,29 @@
         <section id="research" class="py-16 bg-slate-950 border-b border-cyan-900/40">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-10">
-                    <h2 class="text-3xl font-bold text-white tracking-tight">Academic Profiles & Research Databases</h2>
-                    <p class="text-cyan-200/70 mt-2">Connect with my research metrics across international indexing platforms</p>
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Academic &amp; Research Profiles</h2>
+                    <p class="text-cyan-200/70 mt-2">Research profiles, publications and citation records</p>
                 </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <a href="https://scholar.google.com" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="https://scholar.google.com/citations?user=lKc7UcwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
                         <i class="fa-solid fa-graduation-cap text-2xl text-white"></i>
-                        <div><div class="font-semibold text-white text-sm">Google Scholar</div><div class="text-xs text-red-100">Citations & Index</div></div>
+                        <div><div class="font-semibold text-white text-sm">Google Scholar</div><div class="text-xs text-red-100 break-words">Publications and citations</div></div>
                     </a>
-                    <a href="https://orcid.org" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                    <a href="https://orcid.org/0000-0002-0703-5463" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
                         <i class="fa-solid fa-id-card text-2xl text-white"></i>
-                        <div><div class="font-semibold text-white text-sm">ORCID</div><div class="text-xs text-red-100">Researcher ID</div></div>
+                        <div><div class="font-semibold text-white text-sm">ORCID</div><div class="text-xs text-red-100 break-words">0000-0002-0703-5463</div></div>
                     </a>
-                    <a href="https://www.scopus.com" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                    <a href="https://www.scopus.com/authid/detail.uri?authorId=58253324600" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
                         <i class="fa-solid fa-globe text-2xl text-white"></i>
-                        <div><div class="font-semibold text-white text-sm">Scopus</div><div class="text-xs text-red-100">Elsevier Index</div></div>
+                        <div><div class="font-semibold text-white text-sm">Scopus</div><div class="text-xs text-red-100 break-words">Author ID 58253324600</div></div>
                     </a>
-                    <a href="https://www.webofscience.com" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                    <a href="https://www.webofscience.com/wos/author/record/ITV-5226-2023" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
                         <i class="fa-solid fa-book-bookmark text-2xl text-white"></i>
-                        <div><div class="font-semibold text-white text-sm">Web of Science</div><div class="text-xs text-red-100">Clarivate JCR</div></div>
+                        <div><div class="font-semibold text-white text-sm">Web of Science</div><div class="text-xs text-red-100 break-words">ITV-5226-2023</div></div>
                     </a>
-                    <a href="https://www.researchgate.net" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                    <a href="https://www.researchgate.net/profile/Nazrul-Islam-62" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
                         <i class="fa-solid fa-flask text-2xl text-white"></i>
-                        <div><div class="font-semibold text-white text-sm">ResearchGate</div><div class="text-xs text-red-100">Preprints & Papers</div></div>
+                        <div><div class="font-semibold text-white text-sm">ResearchGate</div><div class="text-xs text-red-100 break-words">Research profile</div></div>
                     </a>
                     <a href="https://www.academia.edu" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
                         <i class="fa-solid fa-university text-2xl text-white"></i>
@@ -178,9 +183,50 @@
                         <i class="fa-solid fa-building-columns text-2xl text-white"></i>
                         <div><div class="font-semibold text-white text-sm">IRINS</div><div class="text-xs text-red-100">Indian Network</div></div>
                     </a>
-                    <a href="https://vidwan.inflibnet.ac.in" target="_blank" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
+                    <a href="https://vidwan.inflibnet.ac.in/profile/390561" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 transition-all flex items-center gap-3">
                         <i class="fa-solid fa-award text-2xl text-white"></i>
-                        <div><div class="font-semibold text-white text-sm">Vidwan</div><div class="text-xs text-red-100">INFLIBNET Profile</div></div>
+                        <div><div class="font-semibold text-white text-sm">Vidwan</div><div class="text-xs text-red-100 break-words">Vidwan ID 390561</div></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Outreach -->
+        <section id="outreach" class="py-16 border-b border-cyan-900/40 bg-gradient-to-b from-slate-950 to-blue-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Academic Outreach &amp; Social Media</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="https://www.youtube.com/@GeoQuanta" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 rounded-xl bg-red-600 p-4 text-white shadow-md shadow-red-600/20 transition-colors hover:bg-red-700">
+                        <i class="fa-brands fa-youtube shrink-0 text-xl" aria-hidden="true"></i>
+                        <span class="text-sm font-semibold">YouTube
+                            <span class="block text-xs text-red-100">GeoQuanta</span></span>
+                    </a>
+                    <a href="https://www.blogger.com/blog/posts/4334017384728439072" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 rounded-xl bg-red-600 p-4 text-white shadow-md shadow-red-600/20 transition-colors hover:bg-red-700">
+                        <i class="fa-brands fa-blogger-b shrink-0 text-xl" aria-hidden="true"></i>
+                        <span class="text-sm font-semibold">Blogger Dashboard
+                            <span class="block text-xs text-red-100">Sign-in required</span></span>
+                    </a>
+                    <a href="https://www.facebook.com/nazvio" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 rounded-xl bg-red-600 p-4 text-white shadow-md shadow-red-600/20 transition-colors hover:bg-red-700">
+                        <i class="fa-brands fa-facebook shrink-0 text-xl" aria-hidden="true"></i>
+                        <span class="text-sm font-semibold">Facebook Profile</span>
+                    </a>
+                    <a href="https://www.facebook.com/groups/1334033563681997" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 rounded-xl bg-red-600 p-4 text-white shadow-md shadow-red-600/20 transition-colors hover:bg-red-700">
+                        <i class="fa-brands fa-facebook shrink-0 text-xl" aria-hidden="true"></i>
+                        <span class="text-sm font-semibold">Facebook Group</span>
+                    </a>
+                    <a href="https://www.facebook.com/Nazviom" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 rounded-xl bg-red-600 p-4 text-white shadow-md shadow-red-600/20 transition-colors hover:bg-red-700">
+                        <i class="fa-brands fa-facebook shrink-0 text-xl" aria-hidden="true"></i>
+                        <span class="text-sm font-semibold">Facebook Page</span>
+                    </a>
+                    <a href="https://x.com/nazvio" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 rounded-xl bg-red-600 p-4 text-white shadow-md shadow-red-600/20 transition-colors hover:bg-red-700">
+                        <i class="fa-brands fa-twitter shrink-0 text-xl" aria-hidden="true"></i>
+                        <span class="text-sm font-semibold">X (Twitter)</span>
+                    </a>
+                    <a href="https://www.facebook.com/share/p/1BoBKhNQwx/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 rounded-xl bg-red-600 p-4 text-white shadow-md shadow-red-600/20 transition-colors hover:bg-red-700">
+                        <i class="fa-brands fa-facebook shrink-0 text-xl" aria-hidden="true"></i>
+                        <span class="text-sm font-semibold">Facebook Shared Post</span>
                     </a>
                 </div>
             </div>
@@ -502,6 +548,40 @@
             </div>
         </section>
 
+        <!-- Doctoral Supervision -->
+        <section id="supervision" class="py-16 border-b border-cyan-900/40 bg-gradient-to-b from-blue-950 to-slate-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Ph.D. Supervision</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="rounded-2xl border border-cyan-900/60 bg-slate-950/60 p-6">
+                        <h3 class="text-lg font-semibold text-cyan-300">Awarded</h3>
+                        <ul class="mt-3 space-y-2 text-sm text-slate-100">
+                            <li>Dr. Pinku Das</li>
+                            <li>Dr. Indrayudh Paul</li>
+                            <li>Dr. Keshab Mondal</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl border border-cyan-900/60 bg-slate-950/60 p-6">
+                        <h3 class="text-lg font-semibold text-cyan-300">Pursuing</h3>
+                        <ul class="mt-3 space-y-2 text-sm text-slate-100">
+                            <li>Mr. Guneswar Barman</li>
+                            <li>Mr. Amiya Basak</li>
+                            <li>Mr. Saddam Hossain</li>
+                            <li>Mr. Khueshid Alam</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl border border-cyan-900/60 bg-slate-950/60 p-6">
+                        <h3 class="text-lg font-semibold text-cyan-300">Proposed</h3>
+                        <ul class="mt-3 space-y-2 text-sm text-slate-100">
+                            <li>Miss Anupama Mondal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="py-16 bg-slate-950 border-b border-cyan-900/40">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -527,16 +607,6 @@
                         <p class="text-xs text-red-100 mt-1">+91 7076039420</p>
                     </a>
                 </div>
-
-                <!-- Social Media Buttons -->
-                <div class="flex justify-center gap-4 mt-8">
-                    <a href="https://facebook.com" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 shadow-md shadow-red-600/30">
-                        <i class="fa-brands fa-facebook text-base"></i> Facebook Profile
-                    </a>
-                    <a href="https://x.com" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 shadow-md shadow-red-600/30">
-                        <i class="fa-brands fa-x-twitter text-base"></i> X (Twitter)
-                    </a>
-                </div>
             </div>
         </section>
     </main>
@@ -553,7 +623,8 @@
 
         function toggleMobileMenu() {
             const mobileNav = document.getElementById('mobileNav');
-            mobileNav.classList.toggle('hidden');
+            const isHidden = mobileNav.classList.toggle('hidden');
+            document.getElementById('mobileMenuBtn').setAttribute('aria-expanded', String(!isHidden));
         }
 
         // Search Filter Logic
