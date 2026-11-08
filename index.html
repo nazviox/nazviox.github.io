@@ -16,7 +16,7 @@
 
     <!-- Sticky Navigation Header -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-cyan-900/40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between gap-4 h-16">
                 <a href="#home" class="flex shrink-0 items-center space-x-3">
                     <div class="w-10 h-10 rounded-full border-2 border-red-600 overflow-hidden flex-shrink-0 shadow-lg shadow-red-600/40 bg-amber-100 flex items-center justify-center">
@@ -37,6 +37,7 @@
                     <a href="#supervision" class="hover:text-cyan-400 transition-colors">Ph.D. Supervision</a>
                     <a href="#outreach" class="hover:text-cyan-400 transition-colors">Outreach</a>
                     <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+                    <a href="#comments" class="hover:text-cyan-400 transition-colors">Comments</a>
                 </nav>
 
                 <div class="hidden 2xl:flex shrink-0 items-center space-x-3">
@@ -64,6 +65,7 @@
             <a href="#supervision" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Ph.D. Supervision</a>
             <a href="#outreach" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Outreach</a>
             <a href="#contact" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Contact</a>
+            <a href="#comments" class="block py-2 hover:text-cyan-300" onclick="toggleMobileMenu()">Comments</a>
         </nav>
     </header>
 
@@ -224,9 +226,15 @@
                         <i class="fa-brands fa-twitter shrink-0 text-xl" aria-hidden="true"></i>
                         <span class="text-sm font-semibold">X (Twitter)</span>
                     </a>
-                    <a href="https://www.facebook.com/share/p/1BoBKhNQwx/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 rounded-xl bg-red-600 p-4 text-white shadow-md shadow-red-600/20 transition-colors hover:bg-red-700">
-                        <i class="fa-brands fa-facebook shrink-0 text-xl" aria-hidden="true"></i>
-                        <span class="text-sm font-semibold">Facebook Shared Post</span>
+                    <a href="https://www.instagram.com/nazvio/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 rounded-xl bg-red-600 p-4 text-white shadow-md shadow-red-600/20 transition-colors hover:bg-red-700">
+                        <i class="fa-brands fa-instagram shrink-0 text-xl" aria-hidden="true"></i>
+                        <span class="text-sm font-semibold">Instagram
+                            <span class="block text-xs text-red-100">@nazvio</span></span>
+                    </a>
+                    <a href="https://www.threads.com/@nazvio" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 rounded-xl bg-red-600 p-4 text-white shadow-md shadow-red-600/20 transition-colors hover:bg-red-700">
+                        <i class="fa-solid fa-at shrink-0 text-xl" aria-hidden="true"></i>
+                        <span class="text-sm font-semibold">Threads
+                            <span class="block text-xs text-red-100">@nazvio</span></span>
                     </a>
                 </div>
             </div>
@@ -569,7 +577,7 @@
                             <li>Mr. Guneswar Barman</li>
                             <li>Mr. Amiya Basak</li>
                             <li>Mr. Saddam Hossain</li>
-                            <li>Mr. Khueshid Alam</li>
+                            <li>Mr. Khurshid Alam</li>
                         </ul>
                     </div>
                     <div class="rounded-2xl border border-cyan-900/60 bg-slate-950/60 p-6">
@@ -607,6 +615,22 @@
                         <p class="text-xs text-red-100 mt-1">+91 7076039420</p>
                     </a>
                 </div>
+            </div>
+        </section>
+        <!-- Public comments are stored in GitHub Issues. Install the Utterances app on this public repository and enable Issues before publishing. -->
+        <section id="comments" aria-labelledby="comments-heading" class="py-16 bg-slate-950 border-b border-cyan-900/40">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 id="comments-heading" class="text-3xl font-bold text-white tracking-tight">Comments</h2>
+                    <p class="text-cyan-200/70 mt-2">Leave a question or comment about the site. Comments are public and posting requires a GitHub account.</p>
+                </div>
+                <script src="https://utteranc.es/client.js"
+                        repo="nazviox/nazviox.github.io"
+                        issue-term="Academic Portfolio Comments"
+                        theme="github-dark"
+                        crossorigin="anonymous"
+                        async></script>
+                <noscript><p class="text-center text-cyan-200/70">Enable JavaScript to view and post comments.</p></noscript>
             </div>
         </section>
     </main>
