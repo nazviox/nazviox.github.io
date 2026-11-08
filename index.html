@@ -343,26 +343,6 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="mt-10 rounded-2xl border border-cyan-800/60 bg-cyan-950/60 p-6">
-                    <h3 class="font-bold text-white text-lg">Uploaded Files</h3>
-                    <p id="resourceStatus" role="status" class="mt-2 text-sm text-cyan-100/80"></p>
-                    <ul id="resourceFiles" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" aria-label="Uploaded resource files"></ul>
-                    <noscript><p class="mt-2 text-sm text-cyan-100/80">Enable JavaScript to see the uploaded files.</p></noscript>
-
-                    <details class="mt-6 border-t border-cyan-800/60 pt-4">
-                        <summary class="cursor-pointer text-sm font-semibold text-cyan-300">Manage resource uploads</summary>
-                        <p class="mt-2 max-w-2xl text-sm text-cyan-100/80">
-                            Sign in to GitHub with an account that can edit the repository. If the <code>downloads</code> folder is missing,
-                            choose <strong>Add file → Create new file</strong> on the default branch and commit a file named <code>downloads/.gitkeep</code>.
-                            Then open <code>downloads</code>, choose <strong>Add file → Upload files</strong> and commit the files you want to share.
-                            Files in this folder are public.
-                        </p>
-                        <a href="https://github.com/nazviox/nazviox.github.io" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-red-700">
-                            <i class="fa-solid fa-upload" aria-hidden="true"></i> Upload Files on GitHub
-                        </a>
-                    </details>
-                </div>
             </div>
         </section>
 
@@ -670,57 +650,6 @@
             const isHidden = mobileNav.classList.toggle('hidden');
             document.getElementById('mobileMenuBtn').setAttribute('aria-expanded', String(!isHidden));
         }
-
-        // List public files in the repository's downloads folder.
-        async function loadResourceFiles() {
-            const list = document.getElementById('resourceFiles');
-            const status = document.getElementById('resourceStatus');
-            const repository = 'nazviox/nazviox.github.io';
-            const rawBase = `https://raw.githubusercontent.com/${repository}/`;
-
-            status.textContent = 'Loading uploaded files…';
-
-            try {
-                const response = await fetch(`https://api.github.com/repos/${repository}/contents/downloads`);
-                if (response.status === 404) {
-                    status.textContent = 'No uploaded files are available yet.';
-                    return;
-                }
-                if (!response.ok) throw new Error('Resource folder unavailable');
-
-                const entries = await response.json();
-                if (!Array.isArray(entries)) throw new Error('Expected a resource folder');
-
-                const files = entries.filter(file =>
-                    file.type === 'file' &&
-                    !file.name.startsWith('.') &&
-                    typeof file.download_url === 'string' &&
-                    file.download_url.startsWith(rawBase)
-                ).sort((first, second) => first.name.localeCompare(second.name, undefined, { numeric: true }));
-
-                if (files.length === 0) {
-                    status.textContent = 'No uploaded files are available yet.';
-                    return;
-                }
-
-                for (const file of files) {
-                    const item = document.createElement('li');
-                    const link = document.createElement('a');
-                    link.href = file.download_url;
-                    link.className = 'block break-words rounded-lg border border-cyan-800/60 px-4 py-3 text-sm font-medium text-cyan-100 hover:border-cyan-500 hover:text-white';
-                    link.textContent = file.name;
-                    item.append(link);
-                    list.append(item);
-                }
-                status.textContent = '';
-                status.hidden = true;
-                list.classList.add('mt-4');
-            } catch {
-                status.textContent = 'The uploaded file list is temporarily unavailable. Please try again later.';
-            }
-        }
-
-        loadResourceFiles();
 
         // Search Filter Logic
         const pubSearch = document.getElementById('pubSearch');
