@@ -1,21 +1,13 @@
 # Security Policy
 
-## Supported Versions
-
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+This repository publishes a static academic portfolio on GitHub Pages. There are no versioned software releases; the current published site is the supported version.
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+Please do not post suspected security issues in a public issue or discussion. If private vulnerability reporting is enabled for this repository, use GitHub's **Report a vulnerability** option on the Security tab. Otherwise, contact the maintainer at nazrulislam@cbpbu.ac.in and include:
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+- A description of the issue and the affected page or file
+- Steps to reproduce it, if safe to do so
+- The potential impact
+
+Please avoid including personal data or live secrets in reports. The maintainer will acknowledge reports as soon as reasonably possible and coordinate any necessary fix before publicly disclosing details. This is a best-effort policy; no response-time guarantee is implied.
